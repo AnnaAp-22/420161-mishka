@@ -1,12 +1,130 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
-  </body>
+<html lang = "ru">
+<head>
+  <meta charset = "utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+<body>
+  <header class = "page-header">
+    <h1 class = "page‐header__title">Мишка - магазин товаров ручной работы</h1> <!‐‐ скрыт! ‐‐>
+    <a class = "page‐header__logo">
+      <img src = "http://placehold.it/86x35" width = "86" height = "35" alt = "Мишка - магазин изделий ручной работы">
+    </a>
+    <nav class = "main‐nav"> <!‐‐ main‐nav‐‐open — для открытого состояния меню ‐‐>
+      <button class = "main-nav__toggle" type = "button">Открыть меню</button>
+    </nav>
+  </header>
+  <main class = "index-main">
+    <section class = "main-header">
+      <div class = "main-header__wrapper">
+        <h2 class = "main-header__title">Милые штуки ручной<br> работы для дома</h2>
+        <div class = "category">
+          <a href = "#" class = "category__item category__item--interior">
+            <span>Предметы интерьера</span>
+          </a>
+          <a href = "#" class = "category__item category__item--toy">
+            <span>Детские игрушки</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <article class = "product-best">
+      <div class = "product-best__wrapper">
+        <h3 class = "product-best__title">Вязаные корзинки</h3>
+        <p class = "product-best__week-best">Товар недели</p>
+        <p class = "product-best__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class = "product-best__items">
+          <tr class = "product-best__item">
+            <td class = "product-best__feature">Цвет:</td>
+            <td class = "product-best__value">&laquo;Тиффани&raquo;&frasl;серый</td>
+          </tr>
+          <tr class = "product-best__item">
+            <td class = "product-best__feature">Диаметр:</td>
+            <td class = "product-best__value">25 см</td>
+          </tr>
+          <tr class = "product-best__item">
+            <td class = "product-best__feature">Высота:</td>
+            <td class = "product-best__value">15 см</td>
+          </tr>
+        </table>
+        <div class = "product-best__img">
+          <img src = "http://placehold.it/260x315" width = "260" height = "315" alt = "Вязаные корзинки">
+        </div>
+        <span class = "product-best__price">Цена: 900 руб.</span>
+        <a class = "product-best__order btn" href = "#">Заказать</a>
+      </div>
+    </article>
+    <section class = "about">
+      <h2 class = "about__title">Коротко о нас:</h2>
+      <ul class = "about__list">
+        <li class = "about__item  about__item--ecology">
+          <p> Экологически чистые материалы</p>
+        </li>
+        <li class = "about__item  about__item--scandinavian">
+          <p>Скандинавский стиль по российской цене</p>
+        </li>
+        <li class = "about__item  about__item--likes">
+          <p>Увеличивает лайки на фотографиях</p>
+        </li>
+        <li class = "about__item  about__item--handmade">
+          <p>Связано вручную с любовью и умилением</p>
+        </li>
+        <li class = "about__item  about__item--support">
+          <p>Поддержка отечественного производителя</p>
+        </li>
+        <li class = "about__item  about__item--pack">
+          <p>Поставляется в подарочной упаковке</p>
+        </li>
+      </ul>
+    </section>
+    <section class = "reviews">
+      <div class = "reviews_wrapper">
+        <h2 class = "reviews__title">Отзывы</h2>
+        <blockquote class = "reviews__text">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</blockquote>
+        <p class = "reviews__autor">Анастасия Красильникова</p>
+        <p class = "reviews__username">@misssssiskras</p>
+        <div class = "reviews__nav">
+          <button class = "reviews__prev" type = "button">Предыдущий отзыв</button>
+          <button class = "reviews__next" type = "button">Следующий отзыв</button>
+        </div>
+        <a class = "reviews__write btn" href = "#">Написать</a>
+      </div>
+    </section>
+    <section class = "contacts">
+      <div class = "contacts__wrapper">
+        <h2 class = "contacts__title">Контакты</h2>
+        <div class = "contacts__info">
+          <div class = "contacts__item">
+            <p class = "contacts__item-name">e-mail:</p>
+            <p class = "contacts__item-value"><a class = "contacts__e-mail" href = "#">info@mimimishkashop.ru</a>
+            </p>
+          </div>
+          <div class = "contacts__item">
+            <p class = "contacts__item-name">адрес:</p>
+            <p class = "contacts__item-value">г. Санкт-Петербург,<br> ул. Большая Конюшенная, д. 19/8, офис 101</p>
+          </div>
+        </div>
+      </div>
+      <div class = "contacts__map ">
+        <img src = "http://placehold.it/320x457" width = "320" height = "457" alt = "Мишка на карте">
+      </div>
+      <a class = "contacts__write-us btn" href = "#">Напишите нам</a>
+    </section>
+  </main>
+  <footer class = "page‐footer">
+    <div class = "page‐footer__wrapper">
+      <div class = "page‐footer__social">
+				<span class = "social‐links">
+					<a class = "social‐link social‐link‐‐insta" href = "https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+					<a class = "social‐link social‐link‐‐fb" href = "https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+					<a class = "social‐link social‐link‐‐tw" href = "https://twitter.com/htmlacademy_ru">Мы в Твитере</a>
+				</span>
+      </div>
+      <div class = "page‐footer__copyright">
+        <span>Разработано</span>
+        <a class = "page‐footer__copyright‐link btn" href = "https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
