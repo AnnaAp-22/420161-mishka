@@ -3,12 +3,12 @@
   padding-bottom: 75px;
   margin-bottom: 30px;
   background-color: $sub-header-bg;
+}
 
-  &--index {
-    padding-top: 75px;
-    padding-bottom: 120px;
-    background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
-  }
+.sub-header--index {
+  padding-top: 75px;
+  padding-bottom: 120px;
+  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
 }
 
 .sub-header__title {
