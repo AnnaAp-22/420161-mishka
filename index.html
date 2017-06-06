@@ -2,31 +2,51 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="page-header">
-    <h1 class="page-header__title">Мишка - магазин товаров ручной работы</h1> <!-- скрыт! -->
-    <a class="page-header__logo">
-      <img class="page-header__logo-img" src="http://placehold.it/86x35" width="86" height="35" alt="Мишка - магазин изделий ручной работы">
-    </a>
-    <nav class="main-nav"> <!-- main-nav--open # для открытого состояния меню -->
+    <h1 class="visualy-hidden">Мишка - магазин товаров ручной работы</h1> <!-- скрыт! -->
+    <nav class="main-nav main-nav--closed main-nav--nojs" > <!-- main-nav--open # для открытого состояния меню -->
+      <a class="main-nav__logo">
+        <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка - магазин изделий ручной работы">
+      </a>
       <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <ul class="main-nav__list ">
+        <li class="main-nav__item  main-nav__item--catalog">
+          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item  main-nav__item--order">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__item  main-nav__item--search">
+          <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+        </li>
+        <li class="main-nav__item  main-nav__item--cart">
+          <a class="main-nav__link main-nav__link--cart" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main class="index-main">
     <section class="sub-header sub-header--index">
-      <div class="sub-header__wrapper">
-        <h2 class="sub-header__title">Милые штуки ручной<br> работы для дома</h2>
-        <div class="category">
-          <a href="#" class="category__item category__item--interior">
-            <span>Предметы интерьера</span>
-          </a>
-          <a href="#" class="category__item category__item--toy">
-            <span>Детские игрушки</span>
-          </a>
+      <div class="sub-header__top sub-header__top--index">
+        <div class="sub-header__nav">
+          <a class="sub-header__link" href="#">Новые поступления</a>
+          <a class="sub-header__link" href="#">Распродажа</a>
+          <span class="sub-header__text " href="#">Бесплатная доставка по России</span>
         </div>
+        <h2 class="sub-header__title title-txt">Милые штуки ручной<br> работы для дома</h2>
+      </div>
+      <div class="category">
+        <!--<a href="#" class="category__item category__item&#45;&#45;interior">-->
+          <!--<span>Предметы интерьера</span>-->
+        <!--</a>-->
+        <!--<a href="#" class="category__item category__item&#45;&#45;toy">-->
+          <!--<span>Детские игрушки</span>-->
+        <!--</a>-->
       </div>
     </section>
     <article class="product-best">
@@ -97,7 +117,8 @@
         <div class="contacts__info">
           <div class="contacts__item">
             <p class="contacts__item-name">e-mail:</p>
-            <p class="contacts__item-value"><a class="contacts__e-mail" href="#">info@mimimishkashop.ru</a>
+            <p class="contacts__item-value">
+              <a class="contacts__e-mail" href="#">info@mimimishkashop.ru</a>
             </p>
           </div>
           <div class="contacts__item">
@@ -127,5 +148,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

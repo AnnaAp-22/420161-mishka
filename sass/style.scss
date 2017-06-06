@@ -1,4 +1,3 @@
-//@import "../node_modules/normalize-scss/sass/_normalize.scss";
 @import "global/normalize.scss";
 
 @import "variables.scss";
@@ -7,5 +6,9 @@
 @import "global/fonts.scss";
 @import "global/base.scss";
 
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
 @import "blocks/index-main.scss";
 @import "blocks/sub-header.scss";
+@import "blocks/category.scss";
+

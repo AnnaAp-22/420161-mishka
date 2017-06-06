@@ -1,0 +1,4 @@
+.page-header {
+  @include container;
+  border-bottom: 1px solid $divider-color;
+}
