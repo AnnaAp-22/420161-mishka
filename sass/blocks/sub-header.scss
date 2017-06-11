@@ -1,22 +1,125 @@
+.sub-header {
+  background-color: $prim-color-light;
+}
+
 .sub-header__top {
   display: flex;
   flex-direction: column;
-  width: auto;
-  background-color: $prim-color-light;
-}
-.sub-header__top--index {
-
-  padding-top: 78px;
-  padding-bottom: 117px;
-  background: $prim-color-light url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+  width: 100%;
+  min-height: 130px;
 }
 
 .sub-header__title {
+  flex-grow: 0;
   align-self: center;
-  width: 240px;
   text-align: center;
   color: $prim-txt-color;
 }
+
+.sub-header__top--index {
+  background: $prim-color-light url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+  padding-bottom: 372px;
+}
+
 .sub-header__nav {
-  display:none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 112px;
+}
+
+.sub-header__link {
+  display: block;
+  // width: 100%;
+  text-align: left;
+  padding-top: 17px;
+  //padding-bottom: 28px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $prim-txt-color;
+  transition: color 0.3s ease;
+}
+
+.main-nav__link[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.sub-header__link--disabled {
+  //font-size: 15px;
+  //line-height: 24px;
+  font-weight: 400;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+
+}
+
+.sub-header__link:last-child {
+  margin-left: auto;
+  text-align: right;
+}
+
+@media #{$desktop-width} {
+  .sub-header__top--index {
+    padding-bottom: 360px;
+    background: $prim-color-light url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+  }
+  .sub-header__link--catalog,
+  .sub-header__link--order {
+    display: none;
+  }
+  .sub-header__link--new {
+    margin-right: 60px;
+  }
+}
+
+@media #{$tablet-only} {
+  .sub-header__link--new,
+  .sub-header__link--sale {
+    display: none;
+  }
+  .sub-header__link--catalog {
+    margin-right: 36px;
+  }
+}
+
+@media #{$mobile-only}{
+  .sub-header__top--index {
+    padding-top: 69px;
+    padding-bottom: 120px;
+    background: $prim-color-light url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+  }
+
+  .sub-header__title {
+    flex-grow: 0;
+    align-self: center;
+    width: 244px;
+    text-align: center;
+    color: $prim-txt-color;
+  }
+
+  .sub-header__nav {
+    display: none;
+  }
+}
+
+.sub-header--index {
+  margin-bottom: 27px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 47px;
+  }
+  @media #{$desktop-width} {
+    margin-bottom: 26px;
+  }
 }

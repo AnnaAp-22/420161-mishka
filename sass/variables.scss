@@ -2,8 +2,8 @@ $font-family: "OpenSans", "Arial", sans-serif;
 //
 $base-color:        #ffffff;
 $prim-color-dark:   #616161;
-$prim-color:        #f1f1f1;//-?
-$prim-color-light:  #f1f1f1;
+$prim-color:        #f1f1f1;
+$prim-color-light:  #f9f9f9;
 $prim-color-icon:   #212121;
 $prim-txt-color:   #000000;
 $second-txt-color: #444444;
@@ -15,3 +15,4 @@ $accent-color-dark: #56c3b2;
 $mobile-only: "(max-width: 767px)";
 $tablet-width: "(min-width: 768px)";
 $desktop-width: "(min-width: 1150px)";
+$tablet-only: "(min-width: 768px) and (max-width: 1149px)";

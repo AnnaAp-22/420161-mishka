@@ -1,0 +1,200 @@
+.about {
+  display: flex;
+  //flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 56px;
+
+  @media #{$tablet-width} {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 78px;
+  }
+  @media #{$desktop-width} {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+}
+
+.about__title {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.about__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__item {
+  width: 100%;
+  position: relative;
+  min-height: 120px;
+  padding-top: 83px;
+}
+
+.about__item-text {
+  margin: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: left;
+
+  @media #{$tablet-width} {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.about__item--ecology {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 8px;
+    width: 32px;
+    height: 37.3px;
+    background: url("../img/icon-feature-1.svg") no-repeat 50% 50%;
+  }
+}
+
+.about__item--scandinavian {
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 46.5px;
+    height: 27.3px;
+    background: url("../img/icon-feature-3.svg") no-repeat 50% 50%;
+    background-size: 46.5px 27.3px;
+  }
+}
+
+.about__item--likes {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    display: block;
+    width: 33px;
+    height: 27.9px;
+    background: url("../img/icon-feature-5.svg") no-repeat 50% 50%;
+    background-size: 33px 27.9px;
+  }
+}
+
+.about__item--handmade {
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 3px;
+    display: block;
+    width: 34.3px;
+    height: 34.3px;
+    background: url("../img/icon-feature-2.svg") no-repeat 50% 50%;
+    background-size: 34.3px;
+  }
+}
+
+.about__item--support {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -7px;
+    display: block;
+    width: 54.1px;
+    height: 23.2px;
+    background: url("../img/icon-feature-4.svg") no-repeat 50% 50%;
+    background-size: 54.1px 23.2px;
+  }
+}
+
+.about__item--pack {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 3px;
+    display: block;
+    width: 32.7px;
+    height: 32.5px;
+    background: url("../img/icon-feature-6.svg") no-repeat 50% 50%;
+    background-size: 32.7px 32.5px;
+  }
+}
+
+@media #{$mobile-only}{
+  .about__title {
+    font-size: 25px;
+    padding-bottom: 2px;
+  }
+}
+
+@media #{$tablet-width} {
+  .about__item {
+    width: 50%;
+    position: relative;
+    min-height: 120px;
+    padding-top: 104px;
+    padding-bottom: 6px;
+  }
+  .about__item--ecology {
+    &::before {
+      top: 50px;
+    }
+  }
+
+  .about__item--scandinavian {
+    order: 2;
+    &::before {
+      top: 50px;
+      left: 0;
+    }
+  }
+
+  .about__item--likes {
+    order: 4;
+    &::before {
+      top: 50px;
+      left: 5px;
+    }
+  }
+
+  .about__item--handmade {
+    order: 1;
+    &::before {
+      top: 50px;
+      left: 3px;
+
+    }
+  }
+
+  .about__item--support {
+    order: 3;
+    &::before {
+      top: 50px;
+      left: -7px;
+    }
+  }
+
+  .about__item--pack {
+    order: 5;
+    &::before {
+      top: 50px;
+      left: 3px;
+
+    }
+  }
+}

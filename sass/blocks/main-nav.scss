@@ -67,6 +67,14 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+  .main-nav__logo {
+    flex-grow: 0;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-right: auto;
+    width: 112px;
+    height: 46px;
+  }
   .main-nav__toggle {
     display: none;
 
@@ -75,11 +83,7 @@
 
 @media #{$desktop-width}{
   .main-nav {
-    min-height: 88px; /* Временно для сетки */
     width: 1150px;
-    padding-left: 50px;
-    padding-right: 50px;
-
   }
 
   .main-nav__logo {
@@ -96,14 +100,14 @@
 
     width: 149px;
     height: auto;
-
-   }
+  }
 
 }
 
 .main-nav__list {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 0;
   margin: 0;
   padding: 0;
@@ -150,41 +154,41 @@
   //}
 }
 
-//@media #{$tablet-width} {
-//  .main-nav__list {
-//    flex-direction: row;
-//    flex-wrap: wrap;
-//    z-index: 2;
-//    width: auto;
-//  }
-//}
-
-@media #{$desktop-width} {
+@media #{$tablet-width} {
   .main-nav__list {
     flex-direction: row;
     flex-wrap: wrap;
-    z-index: 2;
-    width: 1050px;
-    flex-grow: 0;
+    width: 550px;
   }
   .main-nav__item {
     display: flex;
     flex-grow: 0;
     //border-top: 1px solid $divider-color;
   }
-  .main-nav__item--catalog {
-    width: 186px;
-    margin-right: 34px;
-    border-right: 1px solid $divider-color;
 
-  }
   .main-nav__item--search {
     margin-left: auto;
     width: 84px;
     border-left: 1px solid $divider-color;
     border-right: 1px solid $divider-color;
   }
+}
 
+@media #{$desktop-width} {
+  .main-nav__list {
+    width: 1050px;
+  }
+  .main-nav__item--catalog {
+    width: 186px;
+    margin-right: 34px;
+    border-right: 1px solid $divider-color;
+  }
+}
+@media #{$tablet-only}{
+  .main-nav__item--catalog,
+  .main-nav__item--order {
+    display: none;
+  }
 }
 
 .main-nav__link {
@@ -202,6 +206,7 @@
   transition: color 0.3s ease;
 
 }
+
 .main-nav__link[href] {
   &:hover {
     opacity: 0.6;
@@ -235,27 +240,11 @@
   opacity: 0.3;
 }
 
-//@media #{$tablet-width} {
-//  .main-nav__link{
-//    position: relative;
-//    display: block;
-//    text-align: right;
-//    //padding-top: 26px;
-//    //padding-bottom: 28px;
-//    //text-decoration: none;
-//    font-size: 17px;
-//    line-height: 24px;
-//    font-weight: 700;
-//    color: $prim-txt-color;
-//    transition: color 0.3s ease;
-//
-//  }
-//
 
-@media #{$desktop-width} {
+@media #{$tablet-width} {
   .main-nav__link {
     text-align: left;
-   }
+  }
   .main-nav__link--search {
     font-size: 0;
   }
