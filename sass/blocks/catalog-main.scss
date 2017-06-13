@@ -1,0 +1,12 @@
+.catalog-main {
+  @include container;
+  margin-bottom: 60px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 64px;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 105px;
+  }
+}
