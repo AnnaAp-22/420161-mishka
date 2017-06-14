@@ -1,6 +1,23 @@
-//@mixin container {
-//  //min-width: 320px;
-//  width: 320px;
-//  margin: 0 auto;
-//  padding: 0 30px;
-//}
+@mixin container {
+  width: 320px;
+  margin: 0 auto;
+
+  @media #{$tablet-width} {
+    width: 768px;
+  }
+
+  @media #{$desktop-width} {
+    width: 1150px;
+  }
+}
+@mixin item15-17-txt {
+  margin: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+
+  @media #{$tablet-width} {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}

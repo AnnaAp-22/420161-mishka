@@ -1,11 +1,23 @@
-//@import "../node_modules/normalize-scss/sass/_normalize.scss";
 @import "global/normalize.scss";
-
 @import "variables.scss";
 @import "mixins.scss";
-
 @import "global/fonts.scss";
 @import "global/base.scss";
+@import "global/typography.scss";
 
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
 @import "blocks/index-main.scss";
 @import "blocks/sub-header.scss";
+@import "blocks/category.scss";
+@import "blocks/product-best.scss";
+@import "blocks/about.scss";
+@import "blocks/reviews.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social-links.scss";
+
+@import "blocks/catalog-main.scss";
+@import "blocks/catalog.scss";
+@import "blocks/product.scss";
+@import "blocks/production.scss";
