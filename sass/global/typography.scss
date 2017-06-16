@@ -38,3 +38,15 @@
     line-height: 24px;
   }
 }
+.label-txt {
+  margin: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: $prim-txt-color;
+
+  @media #{$tablet-width} {
+    font-size: 19px;
+    line-height: 19px;
+  }
+}

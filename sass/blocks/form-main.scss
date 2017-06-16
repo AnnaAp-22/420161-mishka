@@ -1,0 +1,12 @@
+.form-main {
+  @include container;
+  margin-bottom: 38px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 0;
+  }
+
+  @media #{$desktop-width} {
+    margin-bottom: 0;
+  }
+}

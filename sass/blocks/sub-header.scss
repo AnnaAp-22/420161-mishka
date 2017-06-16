@@ -14,6 +14,17 @@
   }
 }
 
+.sub-header--form {
+  margin-bottom: 23px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 73px;
+  }
+  @media #{$desktop-width} {
+    margin-bottom: 136px;
+  }
+}
+
 .sub-header__top {
   display: flex;
   flex-direction: column;
@@ -103,7 +114,7 @@
     margin-top: 53px;
   }
   @media #{$mobile-only}{
-    width: 244px;
+    width: 260px;
   }
 }
 
