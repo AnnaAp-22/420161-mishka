@@ -1,4 +1,5 @@
 .about {
+  @include container;
   display: flex;
   //flex-direction: column;
   flex-wrap: wrap;
@@ -62,6 +63,7 @@
     width: 32px;
     height: 37.3px;
     background: url("../img/icon-feature-1.svg") no-repeat 50% 50%;
+    background-size: 32px 37.3px;
   }
 }
 

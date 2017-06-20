@@ -1,12 +1,11 @@
 .index-main {
-  @include container;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 
   @media #{$tablet-width} {
     margin-bottom: 58px;
   }
 
   @media #{$desktop-width} {
-    margin-bottom: 105px;
+    margin-bottom: 54px;
   }
 }

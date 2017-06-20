@@ -33,14 +33,35 @@
 }
 
 .production__video {
-
+  position: relative;
+  line-height: 0;
 }
-
 .production__play-btn {
-  display: none;
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  width: 101px;
+  height: 77px;
+  font-size: 0;
+  line-height: 0;
+  background: url("../img/icon-play.svg") no-repeat 50% 50%;
+  background-size: 101px 77px;
+  cursor: pointer;
+  transition: transform 0.2s ease,
+  opacity 0.2s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
 }
 
 .production__img {
+
   width: 260px;
   height: 150px;
 
@@ -57,7 +78,7 @@
 .production__text {
   margin: 0;
   width: 100%;
-  padding-top: 23px;
+  padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 33px;
   padding-right: 42px;
@@ -100,6 +121,11 @@
       left: 43px;
     }
   }
+  .production__play-btn {
+    top: 190px;
+    left: 285px;
+
+  }
   .production__btn {
     width: 584px;
     margin-left: 42px;
@@ -132,6 +158,10 @@
     padding-bottom: 47px;
     padding-left: 0;
     padding-right: 65px
+  }
+  .production__play-btn {
+    top: 190px;
+    left: 290px;
   }
   .production__btn {
     width: 230px;

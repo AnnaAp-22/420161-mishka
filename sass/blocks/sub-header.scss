@@ -1,16 +1,22 @@
 .sub-header {
   background-color: $prim-color;
   padding-bottom: 44px;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 
   @media #{$tablet-width} {
-    padding-bottom: 78px;
-    margin-bottom: 80px;
+    padding-bottom: 87px;
+    margin-bottom: 71px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    background-size: auto 17px;
+
   }
 
   @media #{$desktop-width} {
-    padding-bottom: 87px;
-    margin-bottom: 145px;
+    padding-bottom: 121px;
+    margin-bottom: 111px;
+    background-size: auto;
   }
 }
 
@@ -18,14 +24,16 @@
   margin-bottom: 23px;
 
   @media #{$tablet-width} {
-    margin-bottom: 73px;
+    margin-bottom: 65px;
   }
   @media #{$desktop-width} {
-    margin-bottom: 136px;
+    padding-bottom: 121px;
+    margin-bottom: 104px;
   }
 }
 
 .sub-header__top {
+  @include container;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -119,21 +127,39 @@
 }
 
 .sub-header__top--index {
+  padding-top: 0;
+  padding-bottom: 120px;
+  background-color: $prim-color-light;
+  background-image: url('../img/hero-mobile@1x.jpg');
+  background-position: 50% -20px;
+  background-repeat: no-repeat;
+  background-size: 575px 373px;
 
-  @media #{$mobile-only}{
-    background: $prim-color-light url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
-    padding-top: 0;
-    padding-bottom: 120px;
+  @media #{$retina} {
+    background-image: url("../img/hero-mobile@2x.jpg");
   }
+}
 
-  @media #{$tablet-width} {
-    background: $prim-color-light url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
-    padding-bottom: 372px;
+@media #{$tablet-width} {
+  .sub-header__top--index {
+    padding-bottom: 374px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 1150px 746px;
+
+    @media #{$retina} {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
+}
 
-  @media #{$desktop-width} {
-    background: $prim-color-light url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
-    padding-bottom: 360px;
+@media #{$desktop-width} {
+  .sub-header__top--index {
+    padding-bottom: 361px;
+    background-position: 50% 0;
+    background-size: 1250px 746px;
+    // background-size: cover;
   }
 }
 
@@ -144,14 +170,55 @@
 }
 
 .sub-header--index {
-  background-color: $prim-color-light;
   padding-bottom: 0;
   margin-bottom: 27px;
+  //background-color: $prim-color-light;
+  //background-image: url('../img/hero-mobile@1x.jpg');
+  //background-position: 50% -10px;
+  //background-repeat: no-repeat;
+  //background-size: 575px 373px;
+  //
+  //@media #{$retina} {
+  //  background-image: url("../img/hero-mobile@2x.jpg");
+  //
+  //}
+}
 
-  @media #{$tablet-width} {
+@media #{$tablet-width} {
+  .sub-header--index {
+    position: relative;
+    background-color: $prim-color-light;
     margin-bottom: 47px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 11px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      z-index: 2;
+    }
   }
-  @media #{$desktop-width} {
+}
+
+@media #{$desktop-width} {
+  .sub-header--index {
     margin-bottom: 26px;
+    //background-position: 50% -45px;
+    //background-size: cover;
+
+    &::after {
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 20px;
+      background-position: 0 0;
+      background-size: cover;
+    }
   }
 }
