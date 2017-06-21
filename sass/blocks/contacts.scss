@@ -109,8 +109,41 @@
   }
 }
 
+.contacts__map-google {
+  position: relative;
+  padding-bottom: 90%; // (450 ÷ 500 = 0.9 = 90%)
+  height: 0;
+  overflow: hidden;
+}
+
+.contacts__map-google iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
 .contacts__map {
   padding-bottom: 42px;
+
+  picture {
+    display: none;
+  }
+}
+
+.contacts__map-google {
+  display: block;
+  width: 320px;
+  height: 457px;
+}
+
+.contacts__map--nojs {
+
+  .contacts__map-google {
+    display: none;
+  }
 
   img {
     width: 320px;
@@ -154,6 +187,10 @@
       height: 457px;
     }
   }
+  .contacts__map-google {
+    width: 768px;
+    height: 457px;
+  }
 }
 
 @media #{$desktop-width}{
@@ -176,6 +213,10 @@
       width: 525px;
       height: 457px;
     }
+  }
+  .contacts__map-google {
+    width: 525px;
+    height: 457px;
   }
   .contacts__write-us {
     align-self: flex-start;
