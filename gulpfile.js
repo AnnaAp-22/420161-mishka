@@ -24,9 +24,6 @@ gulp.task("style", function () {
         browsers: [
           "last 2 versions"
         ]
-      }),
-      mqpacker({
-        sort: true
       })
     ]))
     .pipe(gulp.dest("build/css"))
