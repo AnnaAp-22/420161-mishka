@@ -1,8 +1,9 @@
 .category {
+  @include container;
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 118px;
+  //min-height: 118px;
 }
 
 @media #{$tablet-width} {
@@ -15,24 +16,51 @@
 }
 
 .category__item {
+  // position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 19px;
+  padding-bottom: 24px;
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: $invert-txt-color;
+  transition: all 0.4s;
 
   &:active {
     opacity: 0.3;
   }
   &:hover {
     opacity: 0.7;
+    transform: scaleY(1.05);
   }
 }
 
+.category__item:hover .category__name,
+.category__item:hover .category__img {
+  transform: translateY(-5px);
+}
+
 .category__item--interior {
-  background-color: $accent-color
+  background-color: $accent-color;
+
+  //  &::before {
+  //  content: "";
+  //  position: absolute;
+  //  top: 25px ;
+  //  right: 35px;
+  //  width: 40px;
+  //  height: 60px;
+  //  background: url("../img/icon-interior.svg") no-repeat;
+  //  background-size: 100%;
+  //  //opacity: 0.3;
+  //}
+
 }
 
 .category__item--toy {
@@ -42,24 +70,24 @@
 .category__name {
   display: block;
   width: 50%;
-  padding-left: 30px;
-  padding-bottom: 28px;
-  padding-top: 28px;
 }
 
 @media #{$tablet-width} {
   .category__item {
     width: 50%;
+    padding-left: 36px;
+    padding-right: 35px;
+    padding-top: 29px;
+    padding-bottom: 29px;
     font-size: 20px;
     line-height: 30px;
   }
   .category__name {
     display: block;
     width: 50%;
-    text-align: center;
+    text-align: left;
     padding-left: 0;
   }
-
 }
 
 @media #{$desktop-width} {
@@ -67,5 +95,4 @@
     width: 33%;
 
   }
-
 }

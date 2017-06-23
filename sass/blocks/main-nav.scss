@@ -3,27 +3,83 @@
   display: flex;
   flex-wrap: wrap;
   width: 320px;
-  min-height: 80px;
+  //min-height: 80px;
   align-items: center;
+
+  @media #{$tablet-width} {
+    //min-height: 88px; /* Временно для сетки */
+    justify-content: flex-start;
+    width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media #{$desktop-width} {
+    width: 1150px;
+
+  }
 }
 
-//.main-nav__logo {
-//  flex-grow: 0;
-//  padding-top: 21px;
-//  padding-bottom: 21px;
-//  // margin-left: 115px;
-//}
+.main-nav__logo {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  margin-left: 115px;
+  text-align: center;
+  width: auto;
+  transition: opacity 0.3s ease;
 
-@media #{$mobile-only}{
-  .main-nav {
-    align-items: center;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__logo-img {
+  width: 86px;
+  height: 35px;
+}
+
+@media #{$tablet-width} {
+  .main-nav__toggle {
+    display: none;
+
   }
   .main-nav__logo {
-    flex-grow: 0;
+    //margin-left: 115px;
+    margin: 0;
     padding-top: 21px;
-    padding-bottom: 21px;
-    margin-left: 115px;
+    padding-bottom: 17px;
+    margin-right: auto;
+    text-align: left;
+
   }
+  .main-nav__logo-img {
+    width: 112px;
+    height: 46px;
+  }
+}
+
+@media #{$desktop-width}{
+  .main-nav__logo {
+    position: absolute;
+    top: 7px;
+    left: 500px;
+    width: 149px;
+    height: 72px;
+    z-index: 2;
+  }
+  .main-nav__logo-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 149px;
+    height: 72px;
+  }
+}
+
+@media #{$mobile-only}{
   .main-nav__toggle {
     flex-grow: 0;
     margin-left: auto;
@@ -48,61 +104,18 @@
     height: 14px;
     transition: opacity 0.3s ease;
     background: url("../img/icon-menu-open.svg") no-repeat center;
+    background-size: 20px 14px;
   }
 
   .main-nav--opened .main-nav__toggle {
     width: 21px;
     height: 20px;
     background: url("../img/icon-menu-close.svg") no-repeat center;
+    background-size: 21px 20px;
   }
   .main-nav--nojs .main-nav__toggle {
     display: none;
   }
-}
-
-@media #{$tablet-width} {
-  .main-nav {
-    min-height: 88px; /* Временно для сетки */
-    width: 768px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .main-nav__logo {
-    flex-grow: 0;
-    padding-top: 21px;
-    padding-bottom: 21px;
-    margin-right: auto;
-    width: 112px;
-    height: 46px;
-  }
-  .main-nav__toggle {
-    display: none;
-
-  }
-}
-
-@media #{$desktop-width}{
-  .main-nav {
-    width: 1150px;
-  }
-
-  .main-nav__logo {
-    position: absolute;
-    top: 0;
-    left: 500px;
-    width: 149px;
-    height: 72px;
-    z-index: 2;
-  }
-  .main-nav__logo-img {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-
-    width: 149px;
-    height: auto;
-  }
-
 }
 
 .main-nav__list {
@@ -140,22 +153,10 @@
     position: static;
     //height: auto;
   }
-
-  //.main-nav--nojs .main-nav__item {
-  //  display: block;
-  //}
-  //
-  //.main-nav--nojs .main-nav__item--active a {
-  //  padding-right: 21px;
-  //  padding-left: 21px;
-  //
-  //  text-align: left;
-  //}
-  //
-  //}
 }
 
 @media #{$tablet-width} {
+
   .main-nav__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -185,6 +186,7 @@
     border-right: 1px solid $divider-color;
   }
 }
+
 @media #{$tablet-only}{
   .main-nav__item--catalog,
   .main-nav__item--order {
@@ -229,6 +231,13 @@
   opacity: 0.3;
 }
 
+.main-nav__link--search:hover::before,
+.main-nav__link--search:active::before {
+  background: url("../img/icon-search-hover.svg") no-repeat;
+  background-size: 100%;
+  opacity: 0.7;
+}
+
 .main-nav__link--cart::before {
   content: "";
   position: absolute;
@@ -241,6 +250,12 @@
   opacity: 0.3;
 }
 
+.main-nav__link--cart:hover::before,
+.main-nav__link--cart:active::before {
+  background: url("../img/icon-cart-hover.svg") no-repeat;
+  background-size: 100%;
+  opacity: 0.7;
+}
 
 @media #{$tablet-width} {
   .main-nav__link {
@@ -252,6 +267,20 @@
   .main-nav__link--cart {
     padding-left: 84px;
     text-align: right;
+
+  }
+}
+
+@media #{$desktop-width} {
+  .main-nav__link {
+    padding-top: 30px;
+    padding-bottom: 33px;
+  }
+  .main-nav__link--search::before {
+    top: 36px;
+  }
+  .main-nav__link--cart::before {
+    top: 34px;
 
   }
 }
