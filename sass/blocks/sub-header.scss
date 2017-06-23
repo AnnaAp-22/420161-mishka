@@ -187,7 +187,7 @@
 @media #{$tablet-width} {
   .sub-header--index {
     position: relative;
-    background-color: $prim-color-light;
+    background: $prim-color-light;
     margin-bottom: 47px;
 
     &::after {
@@ -209,8 +209,8 @@
 @media #{$desktop-width} {
   .sub-header--index {
     margin-bottom: 26px;
-    //background-position: 50% -45px;
-    //background-size: cover;
+    background-position: 50% -45px;
+    background-size: cover;
 
     &::after {
       left: 0;
