@@ -10,7 +10,6 @@
     padding-bottom: 86px;
     margin: 0;
     background-size: auto 17px;
-
   }
   @media #{$desktop-width} {
     padding-bottom: 92px;
@@ -25,6 +24,7 @@
 
 @media #{$tablet-width} {
   .reviews_container-background {
+    background-color: $base-color ;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
