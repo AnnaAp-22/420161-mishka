@@ -45,6 +45,7 @@
   transform: rotate(-45deg);
 }
 
+
 .modal--cart {
   display: none;
   width: 320px;
@@ -189,4 +190,15 @@
   100% {
     transform: translateY(0);
   }
+}
+
+.modal--nojs{
+  position: static;
+  display: block;
+}
+.modal--nojs  .modal--cart{
+  display: block;
+}
+.modal--nojs .modal__close {
+  display: none;
 }

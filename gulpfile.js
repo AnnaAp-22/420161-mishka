@@ -85,13 +85,11 @@ gulp.task("build", function(fn) {
     fn
   );
 });
-
-gulp.task("serve", ["style"], function () {
+gulp.task("serve", ["style"] , function () {
   server.init({
-    server: ".",
+    server: "build",
     notify: false,
     open: true,
-    cors: true,
     ui: false
   });
 

@@ -11,19 +11,6 @@
     margin-bottom: 55px;
   }
 }
-.product__items {
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 0;
-  align-items: flex-start;
-  align-content: flex-start;
-  width: 100%;
-
-  @media #{$desktop-width} {
-    align-items: stretch;
-    justify-content: space-between;
-  }
-}
 
 .product__img-link {
   width: 100%;
@@ -192,9 +179,6 @@
 }
 
 @media #{$desktop-width} {
-  .product__items {
-    justify-content: space-between;
-  }
   .product__descr {
     min-height: 123px;
     padding-left: 27px;

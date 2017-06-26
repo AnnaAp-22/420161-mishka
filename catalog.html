@@ -21,10 +21,10 @@
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list ">
         <li class="main-nav__item  main-nav__item--catalog">
-          <a class="main-nav__link" href="#">Каталог товаров</a>
+          <a class="main-nav__link main-nav__link--catalog" href="#">Каталог товаров</a>
         </li>
         <li class="main-nav__item  main-nav__item--order">
-          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+          <a class="main-nav__link main-nav__link--order" href="form.html">Вязание на заказ</a>
         </li>
         <li class="main-nav__item  main-nav__item--search">
           <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
@@ -39,19 +39,16 @@
     <section class="sub-header">
       <div class="sub-header__top ">
         <div class="sub-header__nav">
-          <a class="sub-header__link sub-header__link--catalog">Каталог товаров</a>
-          <a class="sub-header__link sub-header__link--order" href="form.html">Вязание на заказ</a>
           <a class="sub-header__link sub-header__link--new" href="#">Новые поступления</a>
           <a class="sub-header__link sub-header__link--sale" href="#">Распродажа</a>
           <a class="sub-header__link sub-header__link--delivery sub-header__link--disabled" href="#">Бесплатная доставка по России</a>
-          <!--<span class="sub-header__text " href="#">Бесплатная доставка по России</span>-->
         </div>
         <h2 class="title-txt sub-header__title">Каталог товаров</h2>
       </div>
     </section>
     <section class="catalog">
       <h3 class="visualy-hidden">Раздел каталога</h3> <!-- скрыт! -->
-      <div class="product__items">
+      <div class="catalog__product-items">
         <article class="product">
           <a class="product__img-link" href="#">
             <picture>
@@ -182,7 +179,7 @@
       </a>
     </div>
   </footer>
-  <div class="modal modal--cart ">
+  <div class="modal modal--cart modal--nojs">
     <button class="modal__close " type="button" title="Закрыть"></button>
     <div class="modal__wrapper">
       <h2 class="modal__title">Добавить в корзину</h2>

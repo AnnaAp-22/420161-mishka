@@ -21,10 +21,10 @@
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list ">
         <li class="main-nav__item  main-nav__item--catalog">
-          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+          <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__item  main-nav__item--order">
-          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+          <a class="main-nav__link main-nav__link--order" href="form.html">Вязание на заказ</a>
         </li>
         <li class="main-nav__item  main-nav__item--search">
           <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
@@ -39,8 +39,6 @@
     <section class="sub-header sub-header--index">
       <div class="sub-header__top sub-header__top--index">
         <div class="sub-header__nav">
-          <a class="sub-header__link sub-header__link--catalog" href="catalog.html">Каталог товаров</a>
-          <a class="sub-header__link sub-header__link--order" href="form.html">Вязание на заказ</a>
           <a class="sub-header__link sub-header__link--new" href="#">Новые поступления</a>
           <a class="sub-header__link sub-header__link--sale" href="#">Распродажа</a>
           <a class="sub-header__link sub-header__link--delivery sub-header__link--disabled" href="#">Бесплатная доставка по России</a>
@@ -51,11 +49,11 @@
       <div class="category">
         <a href="#" class="category__item category__item--interior">
           <span class="category__name">Предметы интерьера</span>
-          <img class="categoty__img" src="img/icon-interior.svg" width="40" height="62" alt="Предметы интерьера" >
+          <img class="category__img" src="img/icon-interior.svg" width="40" height="62" alt="Предметы интерьера" >
         </a>
         <a href="#" class="category__item category__item--toy">
           <span class="category__name">Детские игрушки </span>
-          <img class="categoty__img" src="img/icon-toy.svg" width="60" height="60" alt="Детские игрушки">
+          <img class="category__img" src="img/icon-toy.svg" width="60" height="60" alt="Детские игрушки">
         </a>
       </div>
     </section>
@@ -198,7 +196,7 @@
       </a>
     </div>
   </footer>
-  <div class="modal modal--cart ">
+  <div class="modal modal--cart modal--nojs ">
     <button class="modal__close " type="button" title="Закрыть"></button>
     <div class="modal__wrapper">
       <h2 class="modal__title">Добавить в корзину</h2>
